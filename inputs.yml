@@ -9,3 +9,4 @@ topsoln_frac : 0.1
 swap_p : 0.3
 inv_p : 0.2
 keep_children : 2
+stall_patience : 20
