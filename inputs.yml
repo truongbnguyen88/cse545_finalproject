@@ -1,12 +1,14 @@
 # Integer Programming Problem parameters
-n : 16              # we have problems for n = 32, 64, 256
+n : 32              # we have problems for n = 32, 64, 256
 data_load : True
 # Genetic Algorithm parameters
-population_size: 100
-num_generations: 200
-tournament_size: 4
-topsoln_frac : 0.1
+population_size: 250
+num_generations: 400
+tournament_size: 7
+topsoln_frac : 0.15
 swap_p : 0.3
 inv_p : 0.2
-keep_children : 2
-stall_patience : 20
+delta_mutate_p : 0.35
+keep_children : 4
+stall_patience : 50
+n_ga_runs : 10
