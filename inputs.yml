@@ -1,6 +1,9 @@
 # Integer Programming Problem parameters
 n : 256              # we have problems for n = 32, 64, 256
 data_load : True
+use_lp_relaxation : True
+lp_reinject_every : 20
+n_lp_solutions_frac : 0.1
 # Genetic Algorithm parameters
 population_size: 300 # good number is 300
 num_generations: 300
@@ -10,5 +13,5 @@ swap_p : 0.3
 inv_p : 0.2
 delta_mutate_p : 0.35
 keep_children : 5
-stall_patience : 30
+stall_patience : 50
 n_ga_runs : 15
