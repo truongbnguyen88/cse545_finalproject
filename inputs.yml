@@ -11,4 +11,4 @@ inv_p : 0.2
 delta_mutate_p : 0.35
 keep_children : 5
 stall_patience : 30
-n_ga_runs : 10
+n_ga_runs : 15
