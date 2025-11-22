@@ -1,17 +1,35 @@
 # Integer Programming Problem parameters
-n : 256              # we have problems for n = 32, 64, 256
+n : 1024              # we have problems for n = 32, 64, 256
 data_load : True
+soln_load : True     # load pre-computed optimal solution if available
+# Exact solver parameters
+exact_solve_timelimit : 36000   # time limit for exact solver in seconds
+# LP-relaxation parameters
 use_lp_relaxation : True
-lp_reinject_every : 20
-n_lp_solutions_frac : 0.1
+lp_reinject_every : 10
+n_lp_solutions_frac : 0.3
 # Genetic Algorithm parameters
-population_size: 300 # good number is 300
-num_generations: 300
-tournament_size: 5
-topsoln_frac : 0.15
+population_size: 400 # good number is over 300
+num_generations: 1000
+tournament_size: 7
+topsoln_frac : 0.2
 swap_p : 0.3
 inv_p : 0.2
-delta_mutate_p : 0.35
-keep_children : 5
+delta_mutate_p : 0.3
+keep_children : 6
 stall_patience : 50
 n_ga_runs : 10
+# WOC parameters
+woc_enabled : True
+woc_inject_every : 25   # every 10-20 generations
+woc_elite_frac : 0.3    # sample panels from top 30%
+woc_panel_frac : 0.35   # each panel size ≈ 15%-30% of pop
+woc_n_elites_grp : 10   # number of elites
+woc_consensus_k : 5     # selected top-k members per gene for consensus
+woc_n_child_kept : 12   # how many WOC candidates to keep
+woc_trim_frac : 0.1     # for trimmed mean
+woc_softmax_tau : 0.35  # weight temperature
+woc_noise_step : 1      # small post-consensus jitter
+
+# parameters for running single GA-WOC run
+single_ga_woc_run : True
